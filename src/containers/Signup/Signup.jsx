@@ -55,7 +55,7 @@ const Signup = () => {
 
   return (
     <motion.div
-      className="grid md:grid-cols-2 items-center justify-center"
+      className="grid md:grid-cols-2 items-center justify-center md:h-screen"
       variants={animation}
       initial="initial"
       animate="visible"

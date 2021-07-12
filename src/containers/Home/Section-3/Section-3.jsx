@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const Section = () => {
+  // used to animation
   const { ref, inView } = useInView();
   const animation = useAnimation();
 
@@ -45,6 +46,8 @@ const Section = () => {
             </Link>
           </div>
         </div>
+
+        {/* display the man on the mobile */}
         <div
           ref={ref}
           className="md:order-1 w-6/12 transform sm:skew-x-6 lg:skew-x-12 relative"
@@ -65,6 +68,7 @@ const Section = () => {
         </div>
       </div>
 
+      {/* the man image on the tablet or bigger displays, hidden on the mobile */}
       <img
         className="w-1/3 lg:w-1/4 xl:w-1/5 hidden md:block absolute left-5 lg:left-20 xl:left-60 -top-9 lg:top-0 xl:-top-8"
         src={secondPic}

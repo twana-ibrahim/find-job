@@ -9,6 +9,7 @@ import { useLocation } from "react-router-dom";
 const Routes = () => {
   const location = useLocation();
 
+  // the route file
   return (
     <AnimatePresence exitBeforeEnter>
       <Switch location={location} key={location.key}>

@@ -21,6 +21,7 @@ const NavigationBar = () => {
     }
   }, [pathname, prevPath]);
 
+  // mobile sidebar animation
   const animation = {
     initial: {
       x: "-100vw",
@@ -99,11 +100,12 @@ const NavigationBar = () => {
             About Us
           </NavLink>
 
+          {/* add Sign In & Sign Up to the sidebar */}
           <NavLink
             exact
             to={routes.signin.path}
             className="md:hidden transform hover:scale-125 transition duration-300 ease-in-out"
-            activeClassName="border-b pb-1"
+            activeClassName="border-b md:border border-gray-400 pb-1 md:pb-0 md:px-1 transform md:scale-125"
           >
             Sign In
           </NavLink>
@@ -111,7 +113,7 @@ const NavigationBar = () => {
             exact
             to={routes.signup.path}
             className="md:hidden transform hover:scale-125 transition duration-300 ease-in-out"
-            activeClassName="border-b pb-1"
+            activeClassName="border-b md:border border-gray-400 pb-1 md:pb-0 md:px-1 transform md:scale-125"
           >
             Sign Up
           </NavLink>

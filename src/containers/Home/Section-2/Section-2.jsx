@@ -10,9 +10,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Section = () => {
-  const { ref, inView } = useInView();
-  const boxAnimation = useAnimation();
-
+  // box properties
   const boxes = [
     {
       title: "UI/UX Design",
@@ -44,6 +42,10 @@ const Section = () => {
     },
   ];
 
+  // used to box animation
+  const { ref, inView } = useInView();
+  const boxAnimation = useAnimation();
+
   useEffect(() => {
     if (inView) {
       boxAnimation.start((i) => ({
@@ -66,7 +68,7 @@ const Section = () => {
 
   return (
     <motion.div className="grid justify-center items-center bg-blue-50 pt-32 md:pt-8 pb-32 lg:px-10">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold w-2/3 m-auto mb-20">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold w-4/5 sm:w-2/3 m-auto mb-20">
         High demand jobs categories fratured
       </h2>
 

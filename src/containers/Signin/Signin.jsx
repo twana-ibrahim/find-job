@@ -8,6 +8,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const Signin = () => {
+  // used to hold form input data
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -27,6 +28,7 @@ const Signin = () => {
     console.log(formData);
   };
 
+  // animation variants
   const animation = {
     initial: {
       x: "-100vw",
@@ -49,20 +51,20 @@ const Signin = () => {
 
   return (
     <motion.div
-      className="grid md:grid-cols-2 items-center justify-center h-screen"
+      className="grid md:grid-cols-2 items-center justify-center"
       variants={animation}
       initial="initial"
       animate="visible"
       exit="exit"
     >
-      <form className="md:w-11/12 lg:w-4/5 xl:w-3/5 mx-auto bg-white shadow-xl p-10 rounded-2xl">
+      <form className="w-full md:w-11/12 lg:w-4/5 xl:w-3/5 mx-auto bg-white md:shadow-xl md:p-10 rounded-2xl mb-10 order-2 md:order-1">
         <div className="flex flex-col items-center">
           <h4 className="text-4xl font-bold">Welcome</h4>
           <p className="text-gray-500 text-sm sm:text-base lg:text-lg tracking-wider mb-5">
             Login to your account
           </p>
 
-          <div className="relative w-11/12 lg:w-4/5 mb-3">
+          <div className="relative w-full md:w-11/12 lg:w-4/5 mb-3">
             <FontAwesomeIcon
               className="absolute top-2 left-3 text-gray-300"
               icon={faUser}
@@ -77,7 +79,7 @@ const Signin = () => {
             />
           </div>
 
-          <div className="relative w-11/12 lg:w-4/5 mb-3">
+          <div className="relative w-full md:w-11/12 lg:w-4/5 mb-3">
             <FontAwesomeIcon
               className="absolute top-2 left-3 text-gray-300"
               icon={faLock}
@@ -101,7 +103,7 @@ const Signin = () => {
 
           <button
             onClick={onSigninHandler}
-            className="my-6 bg-blue-500 text-white font-semibold md:font-normal md:text-lg flex justify-center items-center w-11/12 lg:w-4/5 py-1 rounded-2xl"
+            className="my-6 bg-blue-500 text-white font-semibold md:font-normal md:text-lg flex justify-center items-center w-full md:w-11/12 lg:w-4/5 py-1 rounded-2xl"
           >
             Sign In
           </button>
@@ -130,8 +132,9 @@ const Signin = () => {
         </div>
       </form>
 
-      <div className="hidden md:block">
-        <Image className="w-4/5 lg:w-3/4 xl:w-2/3 h-96 xl:h-80" />
+      {/* the illustration */}
+      <div className="flex justify-center order-1 md:order-2">
+        <Image className="w-3/5 md:w-4/5 lg:w-3/4 xl:w-2/3 h-48 md:h-96 xl:h-80 mt-16 md:mt-0" />
       </div>
     </motion.div>
   );

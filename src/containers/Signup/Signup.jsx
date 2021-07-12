@@ -8,6 +8,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const Signup = () => {
+  // used to form input data
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -26,10 +27,12 @@ const Signup = () => {
     });
   };
 
-  const onSigninHandler = (e) => {
+  const onSignupHandler = (e) => {
     e.preventDefault();
     console.log(formData);
   };
+
+  // animation variants
   const animation = {
     initial: {
       x: "-100vw",
@@ -52,17 +55,18 @@ const Signup = () => {
 
   return (
     <motion.div
-      className="grid md:grid-cols-2 items-center justify-center h-screen"
+      className="grid md:grid-cols-2 items-center justify-center"
       variants={animation}
       initial="initial"
       animate="visible"
       exit="exit"
     >
-      <div className="hidden md:flex justify-center">
-        <Image className="w-4/5 lg:w-3/4 xl:w-2/3 h-96 xl:h-80" />
+      {/* the illustration */}
+      <div className="flex justify-center">
+        <Image className="w-3/5 md:w-4/5 lg:w-3/4 xl:w-2/3 h-48 md:h-96 xl:h-80 mt-16 md:mt-0" />
       </div>
 
-      <form className="md:w-11/12 lg:w-4/5 xl:w-3/5 mx-auto bg-white shadow-xl p-10 rounded-2xl">
+      <form className="md:w-11/12 lg:w-4/5 xl:w-3/5 mx-auto bg-white md:shadow-xl md:p-10 rounded-2xl mb-10">
         <div className="flex flex-col items-center">
           <h4 className="text-4xl font-bold">Let's Get Start</h4>
           <p className="text-gray-500 text-sm sm:text-base lg:text-lg tracking-wider mb-5">
@@ -73,16 +77,16 @@ const Signup = () => {
             <input
               className="text-center bg-white w-1/2 shadow-lg px-2 py-1 rounded-2xl border border-gray-200"
               type="text"
-              name="firstname"
-              id="firstname"
+              name="first_name"
+              id="first_name"
               placeholder="First Name"
               onChange={onChangeHandler}
             />
             <input
               className="text-center bg-white w-1/2 shadow-lg px-2 py-1 rounded-2xl border border-gray-200"
               type="text"
-              name="lastname"
-              id="lastname"
+              name="last_name"
+              id="last_name"
               placeholder="Last Name"
               onChange={onChangeHandler}
             />
@@ -111,8 +115,8 @@ const Signup = () => {
             <input
               className="bg-white w-full shadow-lg pl-10 pr-2 py-1 rounded-2xl border border-gray-200"
               type="text"
-              name="phone"
-              id="phone"
+              name="phone_number"
+              id="phone_number"
               placeholder="Phone Number"
               onChange={onChangeHandler}
             />
@@ -140,15 +144,15 @@ const Signup = () => {
             <input
               className="bg-white w-full shadow-lg pl-10 pr-2 py-1 rounded-2xl border border-gray-200"
               type="password"
-              name="confirmpassword"
-              id="confirmpassword"
+              name="confirm_password"
+              id="confirm_password"
               placeholder="Confirm Password"
               onChange={onChangeHandler}
             />
           </div>
 
           <button
-            onClick={onSigninHandler}
+            onClick={onSignupHandler}
             className="my-6 bg-blue-500 text-white font-semibold md:font-normal md:text-lg flex justify-center items-center w-11/12 lg:w-4/5 py-1 rounded-2xl"
           >
             Sign Up

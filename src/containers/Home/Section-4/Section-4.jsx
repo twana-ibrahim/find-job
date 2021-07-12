@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Section = () => {
+  // used to animation
   const { ref, inView } = useInView();
   const animation = useAnimation();
 
@@ -57,7 +58,7 @@ const Section = () => {
         </div>
 
         <div ref={ref} className="relative mt-20 md:mt-0">
-          <div className="bg-white flex flex-col mx-auto text-center w-3/4 lg:w-3/5 xl:w-1/2 py-10 rounded-xl">
+          <div className="bg-white flex flex-col mx-auto text-center sm:w-3/4 lg:w-3/5 xl:w-1/2 py-10 rounded-xl">
             <h6 className="text-xl xl:text-2xl font-bold">Upload CV</h6>
             <p className="text-sm lg:text-base mt-2">
               File must be .doc or .pdf{" "}

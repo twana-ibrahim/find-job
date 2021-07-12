@@ -15,20 +15,10 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Section = () => {
-  const rating = {
-    0: true,
-    1: true,
-    2: true,
-    3: true,
-    4: false,
-  };
+  // used to display rating stars
+  const rates = [true, true, true, true, false];
 
-  const rates = [];
-
-  for (let rate in rating) {
-    rates[rate] = rating[rate];
-  }
-
+  // used to animate icons near the man
   const { ref, inView } = useInView();
   const animation = useAnimation();
 

@@ -5,6 +5,7 @@ import SectionThree from "./Section-3/Section-3";
 import SectionFour from "./Section-4/Section-4";
 
 const Home = () => {
+  // use to give the window or pages some animation
   const animation = {
     initial: {
       x: "-100vw",

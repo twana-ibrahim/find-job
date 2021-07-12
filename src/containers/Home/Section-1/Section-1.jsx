@@ -59,9 +59,9 @@ const Section = () => {
             type="text"
             name="search"
             placeholder="Search your job"
-            className="py-2 sm:py-3 xl:py-4 px-2 mr-1 bg-transparent transform skew-x-12 lg:skew-x-30"
+            className="py-2 sm:py-3 xl:py-4 sm:px-2 mr-1 bg-transparent transform skew-x-12 lg:skew-x-30"
           />
-          <button className="bg-blue-500 text-white ml-2 py-1 xl:py-2 px-2 lg:px-4 rounded-md">
+          <button className="bg-blue-500 text-white ml-1 sm:ml-2 py-1 xl:py-2 px-2 lg:px-4 rounded-md">
             <div className="text-sm sm:text-base transform skew-x-12 lg:skew-x-30">
               Get Started
             </div>
